@@ -4,6 +4,7 @@ using PlatformService.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
